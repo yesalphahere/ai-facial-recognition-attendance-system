@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure profile menu icon is always visible */
+.profile-menu-dropdown .btn,
+.profile-menu-dropdown .btn i {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-flex !important;
+}
+
+/* Keep profile menu icon visible when sidebar is collapsed */
+.app-wrapper .semi-nav .app-logo {
+  overflow: visible !important;
+}
+
+.app-wrapper .semi-nav .app-logo .nav-profile {
+  width: 100% !important;
+}
+
+.app-wrapper .semi-nav .app-logo .profile-menu-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-flex !important;
+}
+
+/* Hide profile text in collapsed sidebar */
+.app-wrapper .semi-nav .app-logo .nav-profile .ps-2 {
+  display: none !important;
+}
+
+/* White icon in dark mode for profile menu dots */
+body.dark .profile-menu-dropdown .ph-dots-three-vertical {
+  color: #fff !important;
+}
+
+/* Force all text and icons to white in dark mode */
+body.dark,
+body.dark * {
+  color: #fff !important;
+}
+
+body.dark i,
+body.dark svg,
+body.dark .ph,
+body.dark .ti {
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+/* Input text and placeholders in dark mode */
+body.dark input,
+body.dark textarea,
+body.dark select,
+body.dark .form-control,
+body.dark .form-select {
+  color: #fff !important;
+}
+
+body.dark input,
+body.dark textarea {
+  -webkit-text-fill-color: #fff !important;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder,
+body.dark .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* --- Dark Mode Background Overrides --- */
+
+/* Main Body Background */
+body.dark {
+  background-color: #111827 !important; /* Very dark gray (almost black) */
+}
+
+/* Card & Container Backgrounds */
+body.dark .card,
+body.dark .modal-content {
+  background-color: #1f2937 !important; /* Dark gray */
+  border-color: #374151 !important;
+}
+
+/* Utility Class Mappings for Dark Mode */
+body.dark .bg-white {
+  background-color: #1f2937 !important; /* Maps .bg-white to dark card color */
+}
+
+body.dark .bg-light,
+body.dark .bg-light-soft {
+  background-color: #111827 !important; /* Maps light backgrounds to darker body color */
+}
+
+/* Table Styles */
+body.dark .table,
+body.dark .table tbody td,
+body.dark .table thead th {
+  color: #f3f4f6 !important;
+  border-color: #374151 !important;
+}
+
+body.dark .table-hover tbody tr:hover {
+  background-color: #374151 !important;
+}
+
+/* Sidebar & Navigation */
+body.dark nav {
+  background-color: #1f2937;
+  border-right: 1px solid #374151;
+}
+
+/* Form Inputs */
+body.dark .form-control,
+body.dark .form-select,
+body.dark .input-group-text,
+body.dark textarea {
+  background-color: #111827 !important;
+  border-color: #374151 !important;
+  color: #fff !important;
+}
+
+/* Text Corrections */
+body.dark .text-muted,
+body.dark .text-secondary {
+  color: #9ca3af !important; /* Light gray for readability */
+}
+
+body.dark .text-dark {
+  color: #f3f4f6 !important;
+}
+
+/* Specific Component Fixes */
+body.dark .stats-card:hover {
+  background-color: #374151 !important;
+}
+
+/* Ensure gradients are not overridden if they don't use bg-white */
+body.dark .bg-primary-grad {
+    /* No override needed, keeps gradient */
+}
+
+/* --- Attendance Session & Table Specific Fixes --- */
+
+/* Vision System Offline - Fix missing semitransparent white */
+.bg-white-10 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure list items in telemetry log are dark */
+body.dark .list-group-item {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #fff !important;
+}
+
+body.dark .list-group-item:hover {
+  background-color: #374151 !important; /* Slightly lighter on hover */
+}
+
+/* Force Table Headings to be Dark */
+body.dark thead th,
+body.dark .table thead th {
+  background-color: #111827 !important; /* Matches body bg */
+  color: #9ca3af !important; /* Light gray text */
+  border-bottom: 1px solid #374151 !important;
+}
+
+/* Modal Fixes just in case */
+body.dark .modal-header,
+body.dark .modal-footer {
+  border-color: #374151 !important;
+}
+
+body.dark .close,
+body.dark .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%); /* Make close buttons white */
+}
+
+/* Fix for any hardcoded white backgrounds in AttendanceSession specific styles */
+body.dark .bg-light-soft {
+    background-color: #111827 !important;
+}

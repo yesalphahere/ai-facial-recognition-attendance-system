@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" width="100%" height="100%" style="background:#0b0f19; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="grad-admin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b91c1c" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+    <linearGradient id="grad-teacher" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="grad-student" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="grad-jwt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="40" y="20" width="1020" height="55" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="65" y="47" fill="#f8fafc" font-size="18" font-weight="700">Multi-Tier Role-Based Access Control (RBAC) &amp; Token Governance</text>
+  <text x="65" y="64" fill="#94a3b8" font-size="12">RFC 7519 JWT Rotation • Server-Side ORM Queryset Isolation • Superuser Verification Gates</text>
+  <rect x="910" y="32" width="135" height="28" rx="6" fill="#7c3aed" fill-opacity="0.2" stroke="#7c3aed" stroke-width="1"/>
+  <text x="977" y="50" fill="#c084fc" font-size="11" font-weight="700" text-anchor="middle">RBAC SECURITY</text>
+
+  <!-- ROLE 1: ADMINISTRATOR -->
+  <g transform="translate(40, 95)">
+    <rect x="0" y="0" width="310" height="380" rx="14" fill="#111827" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="310" height="38" rx="14" fill="url(#grad-admin)"/>
+    <rect x="0" y="26" width="310" height="12" fill="url(#grad-admin)"/>
+    <text x="155" y="25" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">👑 Tier 1: System Administrator</text>
+
+    <rect x="20" y="55" width="270" height="65" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="78" fill="#f87171" font-size="12" font-weight="700">Identity: is_superuser = True</text>
+    <text x="35" y="98" fill="#cbd5e1" font-size="11">Institutional campus authority</text>
+
+    <rect x="20" y="130" width="270" height="230" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="155" fill="#f8fafc" font-size="12" font-weight="700">Privileged Capabilities:</text>
+    <text x="35" y="180" fill="#cbd5e1" font-size="11">• Teacher Account Activation / Deactivation</text>
+    <text x="35" y="200" fill="#cbd5e1" font-size="11">• Global Campus Attendance Sessions</text>
+    <text x="35" y="220" fill="#cbd5e1" font-size="11">• Admin Precedence Lock (HTTP 423)</text>
+    <text x="35" y="240" fill="#cbd5e1" font-size="11">• System-Wide Statistical Aggregation</text>
+    <text x="35" y="260" fill="#cbd5e1" font-size="11">• Database Audit Purge (clear-records)</text>
+    <text x="35" y="280" fill="#cbd5e1" font-size="11">• Access to ALL Student Profiles</text>
+    <text x="35" y="315" fill="#f87171" font-size="11" font-weight="700">Enforcement: Server-Side is_superuser</text>
+  </g>
+
+  <!-- ROLE 2: TEACHER / SUPERVISOR -->
+  <g transform="translate(395, 95)">
+    <rect x="0" y="0" width="310" height="380" rx="14" fill="#111827" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="310" height="38" rx="14" fill="url(#grad-teacher)"/>
+    <rect x="0" y="26" width="310" height="12" fill="url(#grad-teacher)"/>
+    <text x="155" y="25" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">👨‍🏫 Tier 2: Course Supervisor</text>
+
+    <rect x="20" y="55" width="270" height="65" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="78" fill="#38bdf8" font-size="12" font-weight="700">Identity: Teacher Profile (active=True)</text>
+    <text x="35" y="98" fill="#cbd5e1" font-size="11">Course &amp; classroom jurisdiction</text>
+
+    <rect x="20" y="130" width="270" height="230" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="155" fill="#f8fafc" font-size="12" font-weight="700">Classroom Capabilities:</text>
+    <text x="35" y="180" fill="#cbd5e1" font-size="11">• 10-Shot Guided Biometric Enrollment</text>
+    <text x="35" y="200" fill="#cbd5e1" font-size="11">• Live Webcam / RTSP Attendance Session</text>
+    <text x="35" y="220" fill="#cbd5e1" font-size="11">• Real-Time Cyan Bounding Box HUD</text>
+    <text x="35" y="240" fill="#cbd5e1" font-size="11">• 7-Day Attendance Intensity Matrix</text>
+    <text x="35" y="260" fill="#cbd5e1" font-size="11">• Student Profile &amp; Status Management</text>
+    <text x="35" y="280" fill="#cbd5e1" font-size="11">• Auto-Absent Reconcile on Session Stop</text>
+    <text x="35" y="315" fill="#38bdf8" font-size="11" font-weight="700">Enforcement: filter(created_by=teacher)</text>
+  </g>
+
+  <!-- ROLE 3: STUDENT -->
+  <g transform="translate(750, 95)">
+    <rect x="0" y="0" width="310" height="380" rx="14" fill="#111827" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="310" height="38" rx="14" fill="url(#grad-student)"/>
+    <rect x="0" y="26" width="310" height="12" fill="url(#grad-student)"/>
+    <text x="155" y="25" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">🎓 Tier 3: Enrolled Student</text>
+
+    <rect x="20" y="55" width="270" height="65" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="78" fill="#34d399" font-size="12" font-weight="700">Identity: Student Profile (is_active=True)</text>
+    <text x="35" y="98" fill="#cbd5e1" font-size="11">Personal self-service scope</text>
+
+    <rect x="20" y="130" width="270" height="230" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="155" fill="#f8fafc" font-size="12" font-weight="700">Self-Service Capabilities:</text>
+    <text x="35" y="180" fill="#cbd5e1" font-size="11">• View Personal Attendance Ledger</text>
+    <text x="35" y="200" fill="#cbd5e1" font-size="11">• Check-in Timestamp &amp; Session Records</text>
+    <text x="35" y="220" fill="#cbd5e1" font-size="11">• Punctuality &amp; Late-Arrival Metrics</text>
+    <text x="35" y="240" fill="#cbd5e1" font-size="11">• Overall Course Participation Rate %</text>
+    <text x="35" y="260" fill="#cbd5e1" font-size="11">• View Personal Encrypted Profile Data</text>
+    <text x="35" y="280" fill="#f87171" font-size="11">• ❌ Cannot Create Sessions or Students</text>
+    <text x="35" y="315" fill="#34d399" font-size="11" font-weight="700">Enforcement: filter(id=student.id)</text>
+  </g>
+</svg>

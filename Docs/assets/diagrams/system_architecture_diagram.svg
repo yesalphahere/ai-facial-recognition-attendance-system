@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="100%" height="100%" style="background:#0b0f19; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-client" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="grad-gateway" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#115e59" />
+    </linearGradient>
+    <linearGradient id="grad-ai" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <linearGradient id="grad-crypto" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b91c1c" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+    <linearGradient id="grad-storage" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    
+    <!-- Glow and Shadows -->
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="40" y="25" width="1020" height="65" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="70" y="58" fill="#f8fafc" font-size="20" font-weight="700" letter-spacing="0.5">AI-Powered Smart Attendance Management System</text>
+  <text x="70" y="78" fill="#94a3b8" font-size="13">High-Level 3-Tier Enterprise Architecture • Edge Computer Vision • Cryptographic Biometric Privacy</text>
+  <rect x="910" y="42" width="125" height="28" rx="6" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="1"/>
+  <text x="972" y="60" fill="#38bdf8" font-size="12" font-weight="600" text-anchor="middle">VERSION 1.0.0</text>
+
+  <!-- TIER 1: CLIENT PRESENTATION TIER -->
+  <rect x="40" y="115" width="310" height="545" rx="16" fill="#111827" stroke="#1e293b" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <rect x="40" y="115" width="310" height="42" rx="16" fill="url(#grad-client)"/>
+  <rect x="40" y="145" width="310" height="12" fill="url(#grad-client)"/>
+  <text x="195" y="141" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle">1. Client Presentation Tier</text>
+
+  <!-- Client Component 1 -->
+  <rect x="60" y="175" width="270" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="75" y="198" fill="#38bdf8" font-size="13" font-weight="700">React 18 Single Page App</text>
+  <text x="75" y="218" fill="#cbd5e1" font-size="11">Teacher &amp; Student Dashboards</text>
+  <text x="75" y="235" fill="#64748b" font-size="10">Axios Interceptors • React Router v6</text>
+
+  <!-- Client Component 2 -->
+  <rect x="60" y="265" width="270" height="85" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="75" y="288" fill="#38bdf8" font-size="13" font-weight="700">Dual-Layer Canvas HUD</text>
+  <text x="75" y="308" fill="#cbd5e1" font-size="11">Hidden Ingestion + Mirrored Overlay</text>
+  <text x="75" y="325" fill="#cbd5e1" font-size="11">60 FPS Native Video Stream</text>
+  <text x="75" y="342" fill="#64748b" font-size="10">HTML5 getUserMedia API</text>
+
+  <!-- Client Component 3 -->
+  <rect x="60" y="365" width="270" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="75" y="388" fill="#38bdf8" font-size="13" font-weight="700">Guided 10-Shot Enrollment</text>
+  <text x="75" y="408" fill="#cbd5e1" font-size="11">Multi-Angle Biometric Ingestion</text>
+  <text x="75" y="425" fill="#64748b" font-size="10">Pitch, Yaw &amp; Distance Capture</text>
+
+  <!-- Client Component 4 -->
+  <rect x="60" y="455" width="270" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="75" y="478" fill="#38bdf8" font-size="13" font-weight="700">Real-Time Telemetry HUD</text>
+  <text x="75" y="498" fill="#cbd5e1" font-size="11">Dynamic Cyan Bounding Boxes</text>
+  <text x="75" y="515" fill="#64748b" font-size="10">Calibrated Confidence Ratings</text>
+
+  <!-- Client Component 5 -->
+  <rect x="60" y="545" width="270" height="95" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="75" y="568" fill="#38bdf8" font-size="13" font-weight="700">SweetAlert2 Security Modals</text>
+  <text x="75" y="588" fill="#cbd5e1" font-size="11">Client Route Guards (ProtectedRoute)</text>
+  <text x="75" y="605" fill="#cbd5e1" font-size="11">Session Timeout &amp; Token Handling</text>
+  <text x="75" y="622" fill="#64748b" font-size="10">Immediate 401 Redirect Safety</text>
+
+  <!-- TIER 2: API & APPLICATION SERVER TIER -->
+  <rect x="395" y="115" width="310" height="545" rx="16" fill="#111827" stroke="#1e293b" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <rect x="395" y="115" width="310" height="42" rx="16" fill="url(#grad-gateway)"/>
+  <rect x="395" y="145" width="310" height="12" fill="url(#grad-gateway)"/>
+  <text x="550" y="141" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle">2. Application &amp; AI Tier</text>
+
+  <!-- Backend Component 1 -->
+  <rect x="415" y="175" width="270" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="430" y="198" fill="#2dd4bf" font-size="13" font-weight="700">Django REST Framework 5.2</text>
+  <text x="430" y="218" fill="#cbd5e1" font-size="11">Unified Routers &amp; ViewSets</text>
+  <text x="430" y="235" fill="#64748b" font-size="10">Teacher, Student &amp; Session Endpoints</text>
+
+  <!-- Backend Component 2 -->
+  <rect x="415" y="265" width="270" height="85" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="430" y="288" fill="#2dd4bf" font-size="13" font-weight="700">JWT Authentication Engine</text>
+  <text x="430" y="308" fill="#cbd5e1" font-size="11">60m Access + 24h Refresh Tokens</text>
+  <text x="430" y="325" fill="#cbd5e1" font-size="11">Sliding Token Rotation &amp; Blacklist</text>
+  <text x="430" y="342" fill="#64748b" font-size="10">PBKDF2-SHA256 Password Hash</text>
+
+  <!-- Backend Component 3 (AI) -->
+  <rect x="415" y="365" width="270" height="95" rx="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="430" y="388" fill="#a78bfa" font-size="13" font-weight="700">OpenCV ONNX Vision Pipeline</text>
+  <text x="430" y="408" fill="#cbd5e1" font-size="11">YuNet: Face Detection (~14ms)</text>
+  <text x="430" y="425" fill="#cbd5e1" font-size="11">SFace: 128-D Embedding (~18ms)</text>
+  <text x="430" y="442" fill="#64748b" font-size="10">Sub-40ms CPU Total Latency</text>
+
+  <!-- Backend Component 4 -->
+  <rect x="415" y="475" width="270" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="430" y="498" fill="#2dd4bf" font-size="13" font-weight="700">EMPR Anti-Spoofing Filter</text>
+  <text x="430" y="518" fill="#cbd5e1" font-size="11">Geometric Temporal Variance (K=10)</text>
+  <text x="430" y="535" fill="#64748b" font-size="10">Rejects Static 2D Photos (Var=0)</text>
+
+  <!-- Backend Component 5 -->
+  <rect x="415" y="565" width="270" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="430" y="588" fill="#2dd4bf" font-size="13" font-weight="700">Session Integrity &amp; Admin Lock</text>
+  <text x="430" y="608" fill="#cbd5e1" font-size="11">Admin Precedence Lock (HTTP 423)</text>
+  <text x="430" y="625" fill="#64748b" font-size="10">Auto-Absent on Session Stop</text>
+
+  <!-- TIER 3: DATA & CRYPTOGRAPHIC STORAGE TIER -->
+  <rect x="750" y="115" width="310" height="545" rx="16" fill="#111827" stroke="#1e293b" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <rect x="750" y="115" width="310" height="42" rx="16" fill="url(#grad-crypto)"/>
+  <rect x="750" y="145" width="310" height="12" fill="url(#grad-crypto)"/>
+  <text x="905" y="141" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle">3. Storage &amp; Cryptographic Vault</text>
+
+  <!-- Storage Component 1 -->
+  <rect x="770" y="175" width="270" height="95" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="785" y="198" fill="#f87171" font-size="13" font-weight="700">Fernet Cryptographic Service</text>
+  <text x="785" y="218" fill="#cbd5e1" font-size="11">AES-128-CBC + HMAC-SHA256</text>
+  <text x="785" y="235" fill="#cbd5e1" font-size="11">In-Memory Stream Decryption</text>
+  <text x="785" y="252" fill="#64748b" font-size="10">Zero Plaintext Stored on Disk</text>
+
+  <!-- Storage Component 2 -->
+  <rect x="770" y="285" width="270" height="85" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="785" y="308" fill="#f87171" font-size="13" font-weight="700">Encrypted Biometric Store</text>
+  <text x="785" y="328" fill="#cbd5e1" font-size="11">media/face_data/*.jpg Blobs</text>
+  <text x="785" y="345" fill="#cbd5e1" font-size="11">Multi-Angle Enrollment Datasets</text>
+  <text x="785" y="362" fill="#64748b" font-size="10">Tamper-Proof HMAC Signatures</text>
+
+  <!-- Storage Component 3 -->
+  <rect x="770" y="385" width="270" height="85" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="785" y="408" fill="#f87171" font-size="13" font-weight="700">PostgreSQL 16 Database</text>
+  <text x="785" y="428" fill="#cbd5e1" font-size="11">ACID Relational Data Engine</text>
+  <text x="785" y="445" fill="#cbd5e1" font-size="11">Encrypted PII (Phone, Address)</text>
+  <text x="785" y="462" fill="#64748b" font-size="10">AttendanceSession &amp; Record Rows</text>
+
+  <!-- Storage Component 4 -->
+  <rect x="770" y="485" width="270" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="785" y="508" fill="#f87171" font-size="13" font-weight="700">Pickled Binary Vector Cache</text>
+  <text x="785" y="528" fill="#cbd5e1" font-size="11">Student.face_encodings BinaryField</text>
+  <text x="785" y="545" fill="#64748b" font-size="10">Sub-120ms Session Cold Startup</text>
+
+  <!-- Storage Component 5 -->
+  <rect x="770" y="575" width="270" height="65" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="785" y="598" fill="#f87171" font-size="13" font-weight="700">Token Blacklist Vault</text>
+  <text x="785" y="618" fill="#cbd5e1" font-size="11">Invalidated Refresh Tokens</text>
+  <text x="785" y="632" fill="#64748b" font-size="10">Protection Against Replay Attacks</text>
+
+  <!-- Connecting Arrows -->
+  <path d="M 350 215 L 415 215" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <path d="M 415 315 L 350 315" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 350 495 L 415 495" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 685 215 L 770 215" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 685 415 L 770 415" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 770 525 L 685 525" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+</svg>

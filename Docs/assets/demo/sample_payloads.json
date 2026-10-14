@@ -1,0 +1,109 @@
+{
+  "system": "AI-Powered Smart Attendance Management System",
+  "version": "1.0.0",
+  "description": "Sample API payloads for automated testing, endpoint verification, and offline evaluator demonstration.",
+  "samples": {
+    "auth_login_request": {
+      "endpoint": "POST /api/teachers/login_user/",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "username": "dr.smith@university.edu",
+        "password": "SecurePassword123!"
+      }
+    },
+    "auth_login_response": {
+      "status": 200,
+      "body": {
+        "status": "success",
+        "role": "teacher",
+        "user_id": 4,
+        "profile_id": 2,
+        "student_id": "",
+        "name": "Dr. John Smith",
+        "email": "dr.smith@university.edu",
+        "department": "Computer Science",
+        "is_superuser": false,
+        "tokens": {
+          "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.sample_access_token_payload...",
+          "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.sample_refresh_token_payload..."
+        }
+      }
+    },
+    "process_frame_request": {
+      "endpoint": "POST /api/sessions/5/process_frame/",
+      "headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "frame": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////..."
+      }
+    },
+    "process_frame_response_matched": {
+      "status": 200,
+      "body": {
+        "active_monitor": true,
+        "detections": [
+          {
+            "id": "CS-2022-045",
+            "name": "Ahmad Khan",
+            "status": "Marked",
+            "new": true,
+            "box": [142, 98, 185, 230],
+            "confidence": 0.892,
+            "display_confidence": 98.4
+          }
+        ]
+      }
+    },
+    "process_frame_response_spoof_rejected": {
+      "status": 200,
+      "body": {
+        "active_monitor": true,
+        "detections": [
+          {
+            "id": "Unknown",
+            "status": "Searching...",
+            "box": [140, 95, 180, 225],
+            "is_live": false,
+            "reason": "EMPR zero geometric variance detected across temporal window"
+          }
+        ]
+      }
+    },
+    "admin_precedence_lock_response": {
+      "status": 423,
+      "body": {
+        "error": "Global Admin Session is currently active. Teacher session is temporarily bypassed.",
+        "admin_precedence": true
+      }
+    },
+    "teacher_stats_response": {
+      "status": 200,
+      "body": {
+        "total_students": 48,
+        "present_today": 42,
+        "absent_today": 6,
+        "late_today": 3,
+        "avg_confidence": 97.6,
+        "avg_attendance": 87.5,
+        "intensity_matrix": [
+          { "day": "Mon", "count": 45 },
+          { "day": "Tue", "count": 44 },
+          { "day": "Wed", "count": 46 },
+          { "day": "Thu", "count": 41 },
+          { "day": "Fri", "count": 42 },
+          { "day": "Sat", "count": 0 },
+          { "day": "Sun", "count": 0 }
+        ],
+        "scope": "Class-Specific",
+        "defaults": {
+          "start_time": "09:00",
+          "off_time": "17:00"
+        }
+      }
+    }
+  }
+}

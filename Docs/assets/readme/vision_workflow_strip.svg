@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 170" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="strip-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080d1a" />
+      <stop offset="50%" stop-color="#0b1326" />
+      <stop offset="100%" stop-color="#070c18" />
+    </linearGradient>
+
+    <!-- Step Gradients -->
+    <linearGradient id="card-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="card-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="card-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="card-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Arrow Gradients -->
+    <linearGradient id="flow-arrow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow-neon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', 'Cascadia Code', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="170" rx="10" fill="url(#strip-bg)" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Technical Top Header Rule -->
+  <g class="mono" font-size="9.5" fill="#64748b" letter-spacing="0.12em">
+    <text x="24" y="24">PIPELINE TOPOLOGY // <tspan fill="#38bdf8">END-TO-END INFERENCE LIFECYCLE</tspan></text>
+    <text x="790" y="24">BUDGET: <tspan fill="#34d399">&lt;40MS (CPU)</tspan></text>
+  </g>
+  <line x1="24" y1="32" x2="976" y2="32" stroke="#1e293b" stroke-width="1" stroke-dasharray="3 3" />
+
+  <!-- STEP 1: Video Ingestion -->
+  <g transform="translate(24, 44)">
+    <rect width="215" height="110" rx="8" fill="url(#card-blue)" stroke="#0284c7" stroke-width="1" stroke-opacity="0.6" />
+    <!-- Step Badge -->
+    <rect x="12" y="12" width="22" height="22" rx="4" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="0.8" />
+    <text x="23" y="27" class="mono" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">1</text>
+    <!-- Title -->
+    <text x="42" y="27" class="sans" font-size="13" font-weight="700" fill="#f8fafc">Video Ingestion</text>
+    <!-- Details -->
+    <g class="sans" font-size="10" fill="#94a3b8">
+      <text x="14" y="54">• HTML5 getUserMedia Stream</text>
+      <text x="14" y="72">• Canvas JPEG Export (q=0.60)</text>
+      <text x="14" y="90">• Zero-Disk RAM Decode (~2ms)</text>
+    </g>
+  </g>
+
+  <!-- Flow Connector 1 -> 2 -->
+  <g transform="translate(245, 92)">
+    <path d="M 0 6 L 18 6" stroke="url(#flow-arrow)" stroke-width="2" stroke-dasharray="2 2" />
+    <polygon points="18,2 25,6 18,10" fill="#38bdf8" />
+  </g>
+
+  <!-- STEP 2: YuNet Face & Landmarks -->
+  <g transform="translate(274, 44)">
+    <rect width="215" height="110" rx="8" fill="url(#card-cyan)" stroke="#0d9488" stroke-width="1" stroke-opacity="0.6" />
+    <!-- Step Badge -->
+    <rect x="12" y="12" width="22" height="22" rx="4" fill="#0d9488" fill-opacity="0.25" stroke="#2dd4bf" stroke-width="0.8" />
+    <text x="23" y="27" class="mono" font-size="11" font-weight="700" fill="#2dd4bf" text-anchor="middle">2</text>
+    <!-- Title -->
+    <text x="42" y="27" class="sans" font-size="13" font-weight="700" fill="#f8fafc">YuNet &amp; EMPR</text>
+    <!-- Details -->
+    <g class="sans" font-size="10" fill="#94a3b8">
+      <text x="14" y="54">• Dynamic 320x320 ONNX CNN</text>
+      <text x="14" y="72">• 5-Point Landmark Extraction</text>
+      <text x="14" y="90">• Passive Ratio Variance Filter</text>
+    </g>
+  </g>
+
+  <!-- Flow Connector 2 -> 3 -->
+  <g transform="translate(495, 92)">
+    <path d="M 0 6 L 18 6" stroke="url(#flow-arrow)" stroke-width="2" stroke-dasharray="2 2" />
+    <polygon points="18,2 25,6 18,10" fill="#818cf8" />
+  </g>
+
+  <!-- STEP 3: SFace Feature Extraction & Match -->
+  <g transform="translate(524, 44)">
+    <rect width="215" height="110" rx="8" fill="url(#card-purple)" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.6" />
+    <!-- Step Badge -->
+    <rect x="12" y="12" width="22" height="22" rx="4" fill="#7c3aed" fill-opacity="0.25" stroke="#c084fc" stroke-width="0.8" />
+    <text x="23" y="27" class="mono" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">3</text>
+    <!-- Title -->
+    <text x="42" y="27" class="sans" font-size="13" font-weight="700" fill="#f8fafc">SFace Recognition</text>
+    <!-- Details -->
+    <g class="sans" font-size="10" fill="#94a3b8">
+      <text x="14" y="54">• 112x112 Canonical Affine Crop</text>
+      <text x="14" y="72">• 128-D Hyperspherical Vector</text>
+      <text x="14" y="90">• Vectorized BLAS Dot Product</text>
+    </g>
+  </g>
+
+  <!-- Flow Connector 3 -> 4 -->
+  <g transform="translate(745, 92)">
+    <path d="M 0 6 L 18 6" stroke="url(#flow-arrow)" stroke-width="2" stroke-dasharray="2 2" />
+    <polygon points="18,2 25,6 18,10" fill="#34d399" />
+  </g>
+
+  <!-- STEP 4: Attendance Commitment -->
+  <g transform="translate(774, 44)">
+    <rect width="202" height="110" rx="8" fill="url(#card-emerald)" stroke="#059669" stroke-width="1" stroke-opacity="0.6" />
+    <!-- Step Badge -->
+    <rect x="12" y="12" width="22" height="22" rx="4" fill="#059669" fill-opacity="0.25" stroke="#34d399" stroke-width="0.8" />
+    <text x="23" y="27" class="mono" font-size="11" font-weight="700" fill="#34d399" text-anchor="middle">4</text>
+    <!-- Title -->
+    <text x="42" y="27" class="sans" font-size="13" font-weight="700" fill="#f8fafc">Attendance Log</text>
+    <!-- Details -->
+    <g class="sans" font-size="10" fill="#94a3b8">
+      <text x="14" y="54">• Daily Deduplication Guarantee</text>
+      <text x="14" y="72">• PostgreSQL ACID Transaction</text>
+      <text x="14" y="90">• Auto Absence Reconciliation</text>
+    </g>
+  </g>
+</svg>

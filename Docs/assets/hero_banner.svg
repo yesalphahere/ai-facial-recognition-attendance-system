@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913" />
+      <stop offset="50%" stop-color="#0a1022" />
+      <stop offset="100%" stop-color="#070c18" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#00e5ff" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="violet-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="scan-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00e5ff" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="75%" stop-color="#818cf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Subtle Technical Grid Pattern -->
+    <pattern id="tech-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.45" />
+      <circle cx="30" cy="0" r="1" fill="#38bdf8" fill-opacity="0.25" />
+    </pattern>
+
+    <!-- Glow Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .font-mono { font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', 'Cascadia Code', monospace; }
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .tracking-wide { letter-spacing: 0.15em; }
+    .tracking-tight { letter-spacing: -0.02em; }
+  </style>
+
+  <!-- Deep Base Canvas -->
+  <rect width="1200" height="360" fill="url(#bg-grad)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="980" cy="180" r="160" fill="#0284c7" fill-opacity="0.12" filter="url(#glow-soft)" />
+  <circle cx="1060" cy="140" r="130" fill="#7c3aed" fill-opacity="0.10" filter="url(#glow-soft)" />
+  <circle cx="150" cy="280" r="140" fill="#00e5ff" fill-opacity="0.05" filter="url(#glow-soft)" />
+
+  <!-- Fine Technical Grid Overlay -->
+  <rect width="1200" height="360" fill="url(#tech-grid)" />
+
+  <!-- Outer Frame & Precision Borders -->
+  <rect x="16" y="16" width="1168" height="328" rx="8" fill="none" stroke="#1e293b" stroke-width="1.2" stroke-opacity="0.8" />
+  <rect x="22" y="22" width="1156" height="316" rx="6" fill="none" stroke="#00e5ff" stroke-width="0.8" stroke-opacity="0.15" />
+
+  <!-- Corner Precision Reticles -->
+  <g stroke="#00e5ff" stroke-width="1.5" stroke-opacity="0.7">
+    <!-- Top-Left -->
+    <path d="M 28 42 L 28 28 L 42 28" fill="none" />
+    <!-- Top-Right -->
+    <path d="M 1172 42 L 1172 28 L 1158 28" fill="none" />
+    <!-- Bottom-Left -->
+    <path d="M 28 318 L 28 332 L 42 332" fill="none" />
+    <!-- Bottom-Right -->
+    <path d="M 1172 318 L 1172 332 L 1158 332" fill="none" />
+  </g>
+
+  <!-- Top Metadata Bar -->
+  <g class="font-mono" font-size="10" fill="#64748b" letter-spacing="0.1em">
+    <text x="50" y="48">SYSTEM: <tspan fill="#38bdf8">OPENCV-ONNX-CV4</tspan> // PIPELINE: <tspan fill="#34d399">ACTIVE</tspan></text>
+    <text x="560" y="48">LATENCY_BUDGET: <tspan fill="#38bdf8">&lt;40MS</tspan> (CPU)</text>
+    <text x="960" y="48">SECURITY_LAYER: <tspan fill="#f43f5e">FERNET-AES128</tspan></text>
+  </g>
+  <line x1="50" y1="58" x2="1150" y2="58" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- LEFT PANE: Project Title, Tagline, & Spec Badges -->
+  <g transform="translate(60, 95)">
+    <!-- Pill Badge -->
+    <g>
+      <rect x="0" y="0" width="375" height="26" rx="13" fill="#0f172a" stroke="#0284c7" stroke-width="1" stroke-opacity="0.7" />
+      <circle cx="14" cy="13" r="4" fill="#00e5ff" filter="url(#glow-cyan)" />
+      <text x="26" y="17" class="font-mono" font-size="10.5" font-weight="600" fill="#38bdf8" letter-spacing="0.12em">COMPUTER VISION &amp; BIOMETRIC GOVERNANCE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="65" class="font-sans tracking-tight" font-size="34" font-weight="800" fill="url(#title-grad)">
+      AI-Based Face Recognition
+    </text>
+    <text x="0" y="105" class="font-sans tracking-tight" font-size="32" font-weight="700" fill="#f8fafc">
+      Attendance Management System
+    </text>
+
+    <!-- Refined Subtitle Tagline -->
+    <text x="0" y="138" class="font-sans" font-size="15" font-weight="400" fill="#94a3b8">
+      Real-Time Edge Computer Vision <tspan fill="#38bdf8">·</tspan> Passive Anti-Spoofing <tspan fill="#38bdf8">·</tspan> Security-Aware Design
+    </text>
+
+    <!-- Architecture Specification Tags -->
+    <g transform="translate(0, 168)" class="font-mono" font-size="10.5">
+      <!-- Tag 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="138" height="26" rx="5" fill="#111827" stroke="#334155" stroke-width="1" />
+        <text x="12" y="17" fill="#38bdf8">⚡ YuNet + SFace</text>
+      </g>
+      <!-- Tag 2 -->
+      <g transform="translate(148, 0)">
+        <rect x="0" y="0" width="148" height="26" rx="5" fill="#111827" stroke="#334155" stroke-width="1" />
+        <text x="12" y="17" fill="#34d399">🛡️ EMPR Liveness</text>
+      </g>
+      <!-- Tag 3 -->
+      <g transform="translate(306, 0)">
+        <rect x="0" y="0" width="154" height="26" rx="5" fill="#111827" stroke="#334155" stroke-width="1" />
+        <text x="12" y="17" fill="#c084fc">🔒 In-RAM Decrypt</text>
+      </g>
+      <!-- Tag 4 -->
+      <g transform="translate(470, 0)">
+        <rect x="0" y="0" width="132" height="26" rx="5" fill="#111827" stroke="#334155" stroke-width="1" />
+        <text x="12" y="17" fill="#f59e0b">👥 3-Tier RBAC</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT PANE: Modern Biometric Mesh, HUD Target & Data Flow Geometry -->
+  <g transform="translate(860, 65)">
+    <!-- Biometric Target HUD Frame -->
+    <rect x="0" y="10" width="260" height="240" rx="10" fill="#0b1329" fill-opacity="0.65" stroke="#1e293b" stroke-width="1.2" />
+
+    <!-- HUD Targeting Brackets (Electric Cyan) -->
+    <g stroke="#00e5ff" stroke-width="2.5" fill="none" filter="url(#glow-cyan)">
+      <path d="M 12 34 L 12 20 L 26 20" />
+      <path d="M 248 34 L 248 20 L 234 20" />
+      <path d="M 12 226 L 12 240 L 26 240" />
+      <path d="M 248 226 L 248 240 L 234 240" />
+    </g>
+
+    <!-- Crosshairs & Grid Center -->
+    <line x1="130" y1="18" x2="130" y2="30" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="130" y1="230" x2="130" y2="242" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="8" y1="130" x2="20" y2="130" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="240" y1="130" x2="252" y2="130" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.6" />
+
+    <!-- Stylized Geometric Face Mesh Wireframe -->
+    <g stroke="#38bdf8" stroke-width="1" stroke-opacity="0.35" fill="none">
+      <!-- Outer Face Oval / Jawline -->
+      <path d="M 80 80 C 80 50, 180 50, 180 80 C 185 110, 190 150, 165 190 C 150 215, 130 220, 130 220 C 130 220, 110 215, 95 190 C 70 150, 75 110, 80 80 Z" stroke-opacity="0.6" />
+      
+      <!-- Eyebrow & Forehead Planes -->
+      <path d="M 88 95 L 115 90 L 130 98 L 145 90 L 172 95" />
+      <path d="M 115 90 L 130 65 L 145 90" />
+      
+      <!-- Eye Triangulation -->
+      <polygon points="92,108 118,105 105,116" stroke="#00e5ff" stroke-opacity="0.5" />
+      <polygon points="168,108 142,105 155,116" stroke="#00e5ff" stroke-opacity="0.5" />
+
+      <!-- Nose Bridge & Base -->
+      <path d="M 130 98 L 126 142 L 130 152 L 134 142 Z" stroke="#38bdf8" stroke-opacity="0.7" />
+      <path d="M 116 150 L 130 152 L 144 150" />
+
+      <!-- Mouth & Chin Contour -->
+      <polygon points="105,175 130,168 155,175 130,185" stroke="#818cf8" stroke-opacity="0.6" />
+      <path d="M 105 175 L 130 210 L 155 175" />
+
+      <!-- Cross-Connection Facets (Neural Mesh) -->
+      <line x1="105" y1="116" x2="126" y2="142" stroke-dasharray="2 2" />
+      <line x1="155" y1="116" x2="134" y2="142" stroke-dasharray="2 2" />
+      <line x1="105" y1="116" x2="80" y2="130" stroke-dasharray="2 2" />
+      <line x1="155" y1="116" x2="180" y2="130" stroke-dasharray="2 2" />
+      <line x1="126" y1="142" x2="105" y2="175" stroke-dasharray="2 2" />
+      <line x1="134" y1="142" x2="155" y2="175" stroke-dasharray="2 2" />
+    </g>
+
+    <!-- 5 Canonical YuNet Facial Landmarks (Glowing Points) -->
+    <!-- 1. Right Eye Landmark -->
+    <circle cx="105" cy="110" r="3.5" fill="#00e5ff" filter="url(#glow-cyan)" />
+    <circle cx="105" cy="110" r="7" fill="none" stroke="#00e5ff" stroke-width="0.8" stroke-opacity="0.7" />
+    
+    <!-- 2. Left Eye Landmark -->
+    <circle cx="155" cy="110" r="3.5" fill="#00e5ff" filter="url(#glow-cyan)" />
+    <circle cx="155" cy="110" r="7" fill="none" stroke="#00e5ff" stroke-width="0.8" stroke-opacity="0.7" />
+    
+    <!-- 3. Nose Tip Landmark -->
+    <circle cx="130" cy="148" r="3.5" fill="#34d399" filter="url(#glow-cyan)" />
+    <circle cx="130" cy="148" r="7" fill="none" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.7" />
+    
+    <!-- 4. Right Mouth Corner -->
+    <circle cx="106" cy="175" r="3" fill="#a855f7" filter="url(#glow-cyan)" />
+    
+    <!-- 5. Left Mouth Corner -->
+    <circle cx="154" cy="175" r="3" fill="#a855f7" filter="url(#glow-cyan)" />
+
+    <!-- Active Horizontal Scan Beam -->
+    <line x1="10" y1="128" x2="250" y2="128" stroke="url(#scan-line-grad)" stroke-width="2.5" filter="url(#glow-cyan)" />
+
+    <!-- Telemetry Badges Inside HUD -->
+    <g class="font-mono" font-size="9" fill="#94a3b8">
+      <rect x="18" y="26" width="76" height="18" rx="3" fill="#0f172a" stroke="#0284c7" stroke-width="0.8" />
+      <text x="24" y="39" fill="#38bdf8">YuNet: 99.4%</text>
+
+      <rect x="166" y="26" width="76" height="18" rx="3" fill="#0f172a" stroke="#059669" stroke-width="0.8" />
+      <text x="172" y="39" fill="#34d399">EMPR: LIVE</text>
+
+      <rect x="18" y="214" width="84" height="18" rx="3" fill="#0f172a" stroke="#7c3aed" stroke-width="0.8" />
+      <text x="24" y="227" fill="#c084fc">SFace: 128-D</text>
+
+      <rect x="156" y="214" width="86" height="18" rx="3" fill="#0f172a" stroke="#0284c7" stroke-width="0.8" />
+      <text x="162" y="227" fill="#38bdf8">SIM &gt; 0.45</text>
+    </g>
+
+    <!-- Vector Embedding Data Pipe Arrow -->
+    <g transform="translate(-85, 95)">
+      <path d="M 0 35 L 55 35" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="3 3" />
+      <polygon points="55,30 65,35 55,40" fill="#38bdf8" />
+      <rect x="2" y="14" width="56" height="16" rx="3" fill="#0b1329" stroke="#334155" stroke-width="0.8" />
+      <text x="8" y="25" class="font-mono" font-size="8.5" fill="#38bdf8">128-D v&#8407;</text>
+    </g>
+  </g>
+
+  <!-- Bottom Terminal Bar -->
+  <g class="font-mono" font-size="10" fill="#475569">
+    <text x="50" y="332">STATUS: <tspan fill="#34d399">ACADEMIC RESEARCH &amp; SECURE SYSTEMS SHOWCASE</tspan></text>
+    <text x="830" y="332">ARCHITECTURE: <tspan fill="#94a3b8">DECOUPLED 3-TIER (REACT + DRF + PG)</tspan></text>
+  </g>
+</svg>
