@@ -50,7 +50,7 @@
 ### Operational Real-Time Face Recognition HUD
 *Dual-layer HTML5 canvas overlay tracking 5-point facial landmarks, computing BLAS vector similarities, and executing sub-40ms timestamped attendance logging.*
 
-<img src="assets/screenshots/07_realtime_ai_vision_session.jpeg" alt="Real-Time Face Recognition HUD" width="95%" />
+<img src="Docs/assets/screenshots/07_realtime_ai_vision_session.jpeg" alt="Real-Time Face Recognition HUD" width="95%" />
 
 <br/><br/>
 
@@ -58,16 +58,16 @@
 
 | Unified Authentication Gateway | Course Supervisor Analytics Dashboard |
 | :---: | :---: |
-| <img src="assets/screenshots/04_unified_login_portal.jpeg" alt="Unified Login Portal" width="100%" /> | <img src="assets/screenshots/05_teacher_analytics_dashboard.jpeg" alt="Teacher Analytics Dashboard" width="100%" /> |
+| <img src="Docs/assets/screenshots/04_unified_login_portal.jpeg" alt="Unified Login Portal" width="100%" /> | <img src="Docs/assets/screenshots/05_teacher_analytics_dashboard.jpeg" alt="Teacher Analytics Dashboard" width="100%" /> |
 | *Role-aware authentication portal with JWT token rotation.* | *Real-time telemetry, attendance intensity heatmaps, and stats.* |
 
 | 10-Shot Biometric Face Enrollment | Faculty Administration Console |
 | :---: | :---: |
-| <img src="assets/screenshots/06_biometric_multiangle_enrollment.jpeg" alt="Face Enrollment" width="100%" /> | <img src="assets/screenshots/08_admin_teacher_management.jpeg" alt="Admin Management" width="100%" /> |
+| <img src="Docs/assets/screenshots/06_biometric_multiangle_enrollment.jpeg" alt="Face Enrollment" width="100%" /> | <img src="Docs/assets/screenshots/08_admin_teacher_management.jpeg" alt="Admin Management" width="100%" /> |
 | *Multi-angle facial landmark capture before encryption.* | *Superuser faculty provisioning and institutional audit controls.* |
 
 <p align="center">
-  <i>Explore all interface captures in the <b><a href="Docs/assets/screenshots/README.md">Complete Screenshot Catalog</a></b>.</i>
+  <i>Explore all interface captures in the <b><a href="Docs/Docs/assets/screenshots/README.md">Complete Screenshot Catalog</a></b>.</i>
 </p>
 
 </div>
@@ -93,7 +93,7 @@ The vision pipeline in [`backend/main/ai_logic.py`](backend/main/ai_logic.py) ex
 
 <div align="center">
 
-<img src="assets/readme/vision_workflow_strip.svg" alt="AI Vision Pipeline Flow" width="100%" />
+<img src="Docs/assets/readme/vision_workflow_strip.svg" alt="AI Vision Pipeline Flow" width="100%" />
 
 </div>
 
@@ -116,7 +116,7 @@ A decoupled three-tier architecture separates presentation, API routing, inferen
 
 <div align="center">
 
-<img src="assets/diagrams/system_architecture_diagram.svg" alt="System Architecture Diagram" width="95%" />
+<img src="Docs/assets/diagrams/system_architecture_diagram.svg" alt="System Architecture Diagram" width="95%" />
 
 </div>
 
@@ -163,7 +163,7 @@ The platform protects biological identities and transactional integrity through 
 
 <div align="center">
 
-<img src="assets/diagrams/cryptographic_security_diagram.svg" alt="Cryptographic Security Diagram" width="95%" />
+<img src="Docs/assets/diagrams/cryptographic_security_diagram.svg" alt="Cryptographic Security Diagram" width="95%" />
 
 </div>
 
@@ -228,7 +228,7 @@ The complete engineering documentation suite is organized in the [`Docs/`](Docs/
 | 🏛️ [System Architecture](Docs/architecture/SYSTEM_ARCHITECTURE.md)<br/>Component topology & layer boundaries | 🔒 [Security & Privacy](Docs/security/security-and-privacy.md)<br/>Cryptographic governance & privacy by design | 🚀 [Technical Challenges](Docs/development/technical-challenges.md)<br/>6 in-depth engineering case studies |
 | 🔄 [Data Flow Specification](Docs/architecture/DATA_FLOW.md)<br/>Vector pipelines & state transitions | 🛡️ [Access Control & RBAC](Docs/security/authentication-and-access-control.md)<br/>JWT rotation & server-side scoping | 📐 [Design Decisions (ADRs)](Docs/development/design-decisions.md)<br/>8 formal Architectural Decision Records |
 | ⚙️ [Technology Stack](Docs/architecture/TECHNOLOGY_STACK.md)<br/>Framework rationales & version matrix | 🎯 [STRIDE Threat Model](Docs/security/threat-model.md)<br/>Threat matrix, attack vectors & defenses | 💡 [Lessons Learned](Docs/development/lessons-learned.md)<br/>Systems engineering reflections |
-| 🎨 [Diagrams Catalog](Docs/assets/diagrams/README.md)<br/>Vector SVGs for architecture & vision | 📸 [Screenshot Catalog](Docs/assets/screenshots/README.md)<br/>Visual walkthroughs with technical captions | 🛠️ [Installation Guide](Docs/setup/installation-guide.md)<br/>Complete setup & deployment runbook |
+| 🎨 [Diagrams Catalog](Docs/assets/diagrams/README.md)<br/>Vector SVGs for architecture & vision | 📸 [Screenshot Catalog](Docs/Docs/assets/screenshots/README.md)<br/>Visual walkthroughs with technical captions | 🛠️ [Installation Guide](Docs/setup/installation-guide.md)<br/>Complete setup & deployment runbook |
 
 ---
 
