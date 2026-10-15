@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero_banner.svg" alt="AI-Based Face Recognition Attendance Management System" width="100%" />
+<img src="Docs/assets/hero_banner.svg" alt="AI-Based Face Recognition Attendance Management System" width="100%" />
 
 <br/>
 
