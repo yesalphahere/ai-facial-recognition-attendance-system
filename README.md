@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  An edge-optimized biometric attendance platform pairing lightweight deep learning models (<b>YuNet</b> and <b>SFace</b>) with a decoupled <b>React</b>, <b>Django REST</b>, and <b>PostgreSQL</b> architecture—engineered with passive anti-spoofing, zero-plaintext in-memory biometric decryption, and server-enforced role-based access control.
+  An edge optimized biometric attendance platform pairing lightweight deep learning models (<b>YuNet</b> and <b>SFace</b>) with a decoupled <b>React</b>, <b>Django REST</b>, and <b>PostgreSQL</b> architecture engineered with passive anti spoofing, zero plaintext in memory biometric decryption, and server enforced role based access control.
 </p>
 
 ---
@@ -48,7 +48,7 @@
 <div align="center">
 
 ### Operational Real-Time Face Recognition HUD
-*Dual-layer HTML5 canvas overlay tracking 5-point facial landmarks, computing BLAS vector similarities, and executing sub-40ms timestamped attendance logging.*
+*Dual layer HTML5 canvas overlay tracking 5 point facial landmarks, computing BLAS vector similarities, and executing sub 40ms timestamped attendance logging.*
 
 <img src="Docs/assets/screenshots/07_realtime_ai_vision_session.jpeg" alt="Real-Time Face Recognition HUD" width="95%" />
 
@@ -59,12 +59,12 @@
 | Unified Authentication Gateway | Course Supervisor Analytics Dashboard |
 | :---: | :---: |
 | <img src="Docs/assets/screenshots/04_unified_login_portal.jpeg" alt="Unified Login Portal" width="100%" /> | <img src="Docs/assets/screenshots/05_teacher_analytics_dashboard.jpeg" alt="Teacher Analytics Dashboard" width="100%" /> |
-| *Role-aware authentication portal with JWT token rotation.* | *Real-time telemetry, attendance intensity heatmaps, and stats.* |
+| *Role aware authentication portal with JWT token rotation.* | *Real time telemetry, attendance intensity heatmaps, and stats.* |
 
 | 10-Shot Biometric Face Enrollment | Faculty Administration Console |
 | :---: | :---: |
 | <img src="Docs/assets/screenshots/06_biometric_multiangle_enrollment.jpeg" alt="Face Enrollment" width="100%" /> | <img src="Docs/assets/screenshots/08_admin_teacher_management.jpeg" alt="Admin Management" width="100%" /> |
-| *Multi-angle facial landmark capture before encryption.* | *Superuser faculty provisioning and institutional audit controls.* |
+| *Multi angle facial landmark capture before encryption.* | *Superuser faculty provisioning and institutional audit controls.* |
 
 <p align="center">
   <i>Explore all interface captures in the <b><a href="Docs/Docs/assets/screenshots/README.md">Complete Screenshot Catalog</a></b>.</i>
